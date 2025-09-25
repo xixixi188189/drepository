@@ -208,13 +208,14 @@ if (!str) {
             window.location = 'https://m.jd.com'; 
         } 
      } 
+const sign = Date.now();
 
     function unlockSuccess() {
       thumb.style.bottom = maxDistance + "px";
       progress.style.height = maxDistance + "px";
       hint.innerText = "解锁成功！ 🎉";
       createConfetti();
-
+  
       // TODO: 在这里写成功后的逻辑，例如跳转或加载数据
       setTimeout(()=>{ 
             const params = new URLSearchParams();
